@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <html lang="en">
   <head>
@@ -7,22 +8,12 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <title>{% block title %}Soumyajit Gorai{% endblock %}</title>
-    <style media="screen">
-    .carousel-item {
-      height: 65vh;
-      min-height: 350px;
-      background: no-repeat center center scroll;
-      -webkit-background-size: cover;
-      -moz-background-size: cover;
-      -o-background-size: cover;
-      background-size: cover;
-      }
-    </style>
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark bg-charcoal">
       <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +32,10 @@
           </ul>
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="#">Resume</a>
+              <a class="nav-link" href="{% url 'home' %}">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'resume' %}">Resume</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="#">Projects</a>
@@ -57,7 +51,15 @@
       </div>
     </nav>
     {% block content %}{% endblock %}
-    <footer class="text-center py-2 text-muted text-light bg-dark">Copyright © 2021 { Soumyajit Gorai }</footer>
+    <section class="py-5 bg-persian-green">
+      <div class="container text-center">
+        <img class="rounded-circle" src="https://via.placeholder.com/120" alt="">
+        <h1 class="font-weight-bold">Interested in hiring me for your project?</h1>
+        <p>Looking for an experienced full-stack developer to build your web app or ship your software product? To start an initial chat, just drop me an email at <a class="text-sandy-brown" href="#">soumya173@gmail.com</a> or use the <a class="text-sandy-brown" href="#">form on the contact page</a>.</p>
+        <a class="btn btn-info bg-crayola" href="#">Let's Talk</a>
+      </div>
+    </section>
+    <footer class="text-center py-2 font-weight-light text-light bg-dark">Copyright © 2021 { Soumyajit Gorai }</footer>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
