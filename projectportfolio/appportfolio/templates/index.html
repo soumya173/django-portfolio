@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
+{% load static%}
 {% block content %}
 <section class="py-5 bg-persian-green">
   <div class="container-fluid">
     <div class="row">
       <div class="col-sm-4">
-        <img src="https://via.placeholder.com/200" alt="..." class="img-thumbnail float-right">
+        <!-- <img src="https://via.placeholder.com/200" alt="..." class="img-thumbnail float-right"> -->
+        <img src="{% static 'images/200x200.png' %}" alt="..." class="img-thumbnail float-right">
       </div>
       <div class="col-sm-8">
         <h6>Hello, My name is</h6>
@@ -22,10 +24,10 @@
     <div class="row">
       <!-- Frontend -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="car-header mt-4">
+        <div class="card mb-5 mb-lg-0 card-hover-effect">
+          <div class="card-header">
             <!-- <img src="https://via.placeholder.com/100" alt="..." class="rounded"> -->
-            <i class="fa fa-desktop fa-5x text-charcoal" aria-hidden="true"></i>
+            <i class="fa fa-desktop fa-5x text-charcoal my-4" aria-hidden="true"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">Frontend</h5>
@@ -42,10 +44,10 @@
       </div>
       <!-- Backend -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="car-header mt-4">
+        <div class="card mb-5 mb-lg-0 card-hover-effect">
+          <div class="card-header">
             <!-- <img src="https://via.placeholder.com/100" alt="..." class="rounded"> -->
-            <i class="fa fa-gears fa-5x text-charcoal" aria-hidden="true"></i>
+            <i class="fa fa-gears fa-5x text-charcoal my-4" aria-hidden="true"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">Backend</h5>
@@ -62,10 +64,10 @@
       </div>
       <!-- Others -->
       <div class="col-lg-4">
-        <div class="card mb-5 mb-lg-0">
-          <div class="car-header mt-4">
+        <div class="card mb-5 mb-lg-0 card-hover-effect">
+          <div class="card-header">
             <!-- <img src="https://via.placeholder.com/100" alt="..." class="rounded"> -->
-            <i class="fa fa-send fa-5x text-charcoal" aria-hidden="true"></i>
+            <i class="fa fa-send fa-5x text-charcoal my-4" aria-hidden="true"></i>
           </div>
           <div class="card-body">
             <h5 class="card-title text-muted text-uppercase text-center">Others</h5>

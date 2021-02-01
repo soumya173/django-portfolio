@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block content %}
 <section>
   <div class="container">
@@ -21,7 +22,7 @@
       <hr>
       <div class="row my-5">
         <div class="col-md-6 col-lg-4 col-xl-3 text-center">
-          <img class="rounded-circle" src="https://via.placeholder.com/120" alt="">
+          <img class="rounded-circle" src="{% static 'images/120x120.png' %}" alt="">
         </div>
         <div class="col-md-6 col-lg-8 col-xl-9 text-justify">
           <p>A self motivated and independent developer, working as a backend software developer in the IT industry for more than 3 years in agile model. Experienced in developing REST APIs and other services in a micro-service based cloud applicaiton. A quick learner and a real-time problem solver with a positive attitude towards learning new things.</p>
@@ -38,12 +39,74 @@
               <p class="text-muted">Ribbon Communications</p>
             </div>
             <div class="col-12 col-md-6 col-lg-4 font-italic text-muted text-left text-md-right">
-              <p>2017 - Present</p>
+              <p>Dec, 2017 - Present</p>
             </div>
           </div>
           <div class="row">
             <div class="col-sm-12">
               <p>Develop clean and reusable modules in Python to build system applications which can run on various platforms. Debug issues and fix bugs in the system using the agile development life cycle. Develop REST APIs using swagger model and python flask. Develop end to end feature with zero tolerance for bugs and contributing to daily scrum meetings.</p>
+            </div>
+          </div>
+          <hr>
+          <!-- Full Stack Developer Codebreak -->
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+              <h6 class="font-weight-bold">Full Stack Developer</h6>
+              <p class="text-muted">Codebreak</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 font-italic text-muted text-left text-md-right">
+              <p>Sep, 2017 - Dec, 2017</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Worked as a crucial part of their web development team and updated and added features to their official website (www.codebreak.in). And also developed their official microsite (www.marketpredictor.in) from scratch.</p>
+            </div>
+          </div>
+          <hr>
+          <!-- Full Stack Developer Saakshar -->
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+              <h6 class="font-weight-bold">Full Stack Developer</h6>
+              <p class="text-muted">Saakshar Organization</p>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 font-italic text-muted text-left text-md-right">
+              <p>Jul, 2017 - Sep, 2017</p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>Worked as a part of the development team and contributed to the development of their official website(saakshar.org.in) from scratch. Tasks involved hosting, developing and handling all the requests from the client in their website using wordpress and PHP.</p>
+            </div>
+          </div>
+          <!-- Projects -->
+          <h5 class="text-uppercase text-persian-green font-weight-bold pl-3 my-4 topic-border-left">Personal Projects</h5>
+          <!-- Django portfolio -->
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+              <h6 class="font-weight-bold"><a class="text-sandy-brown" target="_blank" href="https://github.com/soumya173/django-portfolio">Django Portfolio</a></h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 font-italic text-muted text-left text-md-right">
+              <p>Open Sourced in <i class="fa fa-github text-charcoal" aria-hidden="true"></i></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>A personal portfolio website (fully responsive and userfriendly) to showcase the skills in full stack development. The website is fully designed and developed using HTML, CSS, Bootstrap, jQuery in frontend and Python Django in the backend.</p>
+            </div>
+          </div>
+          <!-- Mobistore -->
+          <div class="row">
+            <div class="col-12 col-md-6 col-lg-8 mb-2 mb-md-0">
+              <h6 class="font-weight-bold"><a class="text-sandy-brown" target="_blank" href="https://github.com/soumya173/mobistore">Online Mobile Store</a></h6>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 font-italic text-muted text-left text-md-right">
+              <p>Open Sourced in <i class="fa fa-github text-charcoal" aria-hidden="true"></i></p>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-12">
+              <p>An website to showcase the skills in full stack development. The website is fully designed and developed using HTML, CSS, Bootstrap, jQuery in frontend and Python Flask and MySQL in the backend. This has a fully finctional admin panel to manage the products, offers etc.</p>
             </div>
           </div>
         </div>
@@ -69,6 +132,7 @@
           <p class="text-muted">Computer Science and Engineering</p>
         </div>
       </div>
+      <hr>
     </div>
   </div>
 </section>
