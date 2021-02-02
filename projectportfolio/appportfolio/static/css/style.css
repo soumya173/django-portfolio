@@ -41,7 +41,7 @@
   -o-transition: all 0.5s;
 }
 .card-hover-effect:hover {
-  box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);
+  box-shadow: 0 1rem 3rem rgba(0,0,0,0.175);  
   transition: all 0.5s;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;

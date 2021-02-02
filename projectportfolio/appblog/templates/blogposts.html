@@ -1,0 +1,55 @@
+{% extends 'blogbase.html' %}
+{% load static %}
+{% block title %}Blogs{% endblock %}
+{% block metatags %}
+<meta name="description" content="A destination for curious mindsg">
+<meta property="og:title" content="Blog posts">
+<meta property="og:site_name" content="Portfolio">
+<meta property="og:description" content="A destination for curious minds">
+<meta property="og:type" content="website">
+{% endblock %}
+{% block content %}
+<section class="my-5">
+  <div class="container">
+    {% for post in posts_list %}
+      <div class="row">
+        <div class="col-md-5">
+          <a href="{% url 'singlepost' post.slug %}">
+            <img class="img-fluid rounded" src="http://placehold.it/700x300" alt="">
+          </a>
+        </div>
+        <div class="col-md-7">
+          <h3><a class="text-crayola" href="{% url 'singlepost' post.slug %}">{{ post.title }}</a></h3>
+          <small class="text-muted">{{ post.author }} | {{ post.updated_on }}</small>
+          <p>{{ post.metades }}</p>
+        </div>
+      </div>
+      <hr>
+    {% endfor %}
+    <!-- Pagination -->
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+          <span class="sr-only">Previous</span>
+        </a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">1</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">2</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#">3</a>
+      </li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+          <span class="sr-only">Next</span>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+{% endblock %}
