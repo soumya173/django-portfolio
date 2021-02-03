@@ -116,6 +116,24 @@ USE_L10N = True
 
 USE_TZ = True
 
+# looks for static files in each app
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+)
+
+STATICFILES_STORAGE = (
+    'django.contrib.staticfiles.storage.StaticFilesStorage'
+)
+
+# the absolute path to the directory where collectstatic will collect static files for deployment (OUTPUT)
+STATIC_ROOT = ''
+
+# This setting defines the additional locations the static files app will traverse if the FileSystemFinder finder is enabled.
+STATICFILES_DIRS = (
+    # used for static assets that aren't tied to a particular app
+     os.path.join(BASE_DIR, 'static'),
+)
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
