@@ -126,19 +126,11 @@ STATICFILES_STORAGE = (
     'django.contrib.staticfiles.storage.StaticFilesStorage'
 )
 
-# the absolute path to the directory where collectstatic will collect static files for deployment (OUTPUT)
-STATIC_ROOT = ''
-
 # This setting defines the additional locations the static files app will traverse if the FileSystemFinder finder is enabled.
 STATICFILES_DIRS = (
     # used for static assets that aren't tied to a particular app
-     os.path.join(BASE_DIR, 'static'),
+    # os.path.join(BASE_DIR, 'static'),
 )
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/3.1/howto/static-files/
-# STATIC_DIRS = [
-#     os.path.join(BASE_DIR, 'appportfolio', 'static'),
-# ]
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 STATIC_URL = '/static/'
