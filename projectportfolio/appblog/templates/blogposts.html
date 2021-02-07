@@ -1,4 +1,4 @@
-{% extends 'blogbase.html' %}
+{% extends 'base.html' %}
 {% load static %}
 {% block title %}Blogs{% endblock %}
 {% block metatags %}
@@ -14,13 +14,13 @@
     {% for post in posts_list %}
       <div class="row">
         <div class="col-md-5">
-          <a href="{% url 'singlepost' post.slug %}">
+          <a href="{% url 'singlepost' post.pk %}">
             <img class="img-fluid rounded" src="http://placehold.it/700x300" alt="">
           </a>
         </div>
         <div class="col-md-7">
-          <h3><a class="text-crayola" href="{% url 'singlepost' post.slug %}">{{ post.title }}</a></h3>
-          <small class="text-muted">{{ post.author }} | {{ post.updated_on }}</small>
+          <h3><a class="text-crayola" href="{% url 'singlepost' post.pk %}">{{ post.title }}</a></h3>
+          <small class="text-muted">Posted at {{ post.updated_on }} By {{ post.author.first_name }} {{ post.author.last_name }}</small>
           <p>{{ post.metades }}</p>
         </div>
       </div>
