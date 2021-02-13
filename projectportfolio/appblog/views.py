@@ -6,7 +6,7 @@ from django.views import generic
 class blogposts(generic.ListView):
     queryset = posts.objects.filter(status=1).order_by('-created_on')
     template_name = 'blogposts.html'
-    paginate_by = 4
+    paginate_by = 5
 
 # class based view for each post
 class singlepost(generic.DetailView):
