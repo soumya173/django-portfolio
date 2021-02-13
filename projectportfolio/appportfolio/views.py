@@ -7,3 +7,6 @@ def home(request):
 def resume(request):
     context = {}
     return render(request, 'resume.html', context)
+def experience(request):
+    context = {}
+    return render(request, 'experience.html', context)

@@ -5,7 +5,7 @@
 <meta name="description" content="{{ object.metades}}" />
 <meta property="og:title" content="{{ object.title }}">
 <meta property="og:site_name" content="Portfolio">
-<meta property="og:url" content="{% url 'singlepost' object.pk %}">
+<meta property="og:url" content="{% url 'singlepost' object.slug %}">
 <meta property="og:description" content="{{ object.metades }}">
 <meta property="og:type" content="article">
 {% endblock %}
@@ -15,14 +15,6 @@
     <h2>{{ object.title }}</h2>
     <small class="text-muted">Posted at {{ post.updated_on }} By {{ post.author.first_name }} {{ post.author.last_name }}</small>
     <p>{{ object.content | safe }}</p>
-    {% if user.is_authenticated %}
-      <form class="" action="{% url 'like_post' object.pk %}" method="post">
-        {% csrf_token %}
-        <button type="submit" class="btn btn-primary" name="like_post_btn" value="{{ object.pk }}"><span class="badge badge-light">{{ total_likes }}</span> <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Like </button>
-      </form>
-    {% else %}
-      <p class="text-muted">Login to like the post</p>
-    {% endif %}
   </div>
 </section>
 {% endblock %}

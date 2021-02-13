@@ -23,10 +23,6 @@ class posts(models.Model):
     # status of post
     status = models.IntegerField(choices=STATUS, default=0)
     labels = models.CharField(max_length=300, blank=True, null=True)
-    likes = models.ManyToManyField(User, related_name="blog_post", blank=True)
-
-    def total_likes(self):
-        return self.likes.count()
 
     # meta for the class
     class Meta:
