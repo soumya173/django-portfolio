@@ -1,3 +1,4 @@
+![GitHub last commit](https://img.shields.io/github/last-commit/soumya173/django-portfolio) ![GitHub](https://img.shields.io/github/license/soumya173/django-portfolio) ![GitHub repo size](https://img.shields.io/github/repo-size/soumya173/django-portfolio) 
 # django-portfolio
  A personal portfolio website developed fully in django. This has a nice responsive UI for better user experince across different devices.
 
